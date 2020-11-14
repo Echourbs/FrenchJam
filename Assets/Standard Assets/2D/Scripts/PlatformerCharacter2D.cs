@@ -100,8 +100,13 @@ namespace UnityStandardAssets._2D
             }
         }
 
+        public bool facingRight()
+        {
+            return m_FacingRight;
+        }
 
-        private void Flip()
+
+        public void Flip()
         {
             // Switch the way the player is labelled as facing.
             m_FacingRight = !m_FacingRight;

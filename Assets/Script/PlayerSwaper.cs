@@ -5,10 +5,10 @@ using UnityStandardAssets._2D;
 
 public class PlayerSwaper : MonoBehaviour
 {
+    public GameObject shinko_class;
     private GameObject kibonoki;
     private GameObject shinko;
     private Camera2DFollow camera;
-    private Platformer2DUserControl[] controls;
     private GameObject focus;
 
 
@@ -16,34 +16,57 @@ public class PlayerSwaper : MonoBehaviour
     void Start()
     {
         kibonoki = GameObject.Find("Kibonoki");
-        shinko = GameObject.Find("Shinko");
         focus = kibonoki;
 
-        camera = GameObject.Find("Camera").GetComponent<UnityStandardAssets._2D.Camera2DFollow>();
-
-        controls = new Platformer2DUserControl[] { kibonoki.GetComponent<Platformer2DUserControl>(), shinko.GetComponent<Platformer2DUserControl>() };
+        camera = GameObject.Find("Camera").GetComponent<Camera2DFollow>();
     }
 
     void swap()
     {
-        foreach (Platformer2DUserControl i in controls)
+        if (shinko)
         {
-            i.enabled = !i.enabled;
+            shinko.GetComponent<Platformer2DUserControl>().enabled = !shinko.GetComponent<Platformer2DUserControl>().enabled;
+            kibonoki.GetComponent<Platformer2DUserControl>().enabled = !kibonoki.GetComponent<Platformer2DUserControl>().enabled;
+
+            focus.GetComponent<Animator>().SetFloat("Speed", 0);
+            focus = focus == kibonoki ? shinko : kibonoki;
+            camera.target = focus.transform;
         }
+    }
 
-        focus.GetComponent<Animator>().SetFloat("Speed", 0);
+    void spawn()
+    {
+        if (focus == kibonoki)
+        {
+            if (shinko)
+            {
+                Destroy(shinko);
+                shinko = null;
+            }
+            else
+            {
+                bool direction = kibonoki.GetComponent<PlatformerCharacter2D>().facingRight();
 
-        focus = focus == kibonoki ? shinko : kibonoki;
-
-        camera.target = focus.transform;
+                shinko = Instantiate(shinko_class, kibonoki.transform.position + new Vector3(direction ? 1 : -1, 0), kibonoki.transform.rotation);
+                if (!direction)
+                {
+                    shinko.GetComponent<PlatformerCharacter2D>().Flip();
+                }
+                swap();
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.W))
+        if (Input.GetKeyUp(KeyCode.X))
         {
             swap();
+        }
+        if (Input.GetKeyUp(KeyCode.C))
+        {
+            spawn();
         }
     }
 }
