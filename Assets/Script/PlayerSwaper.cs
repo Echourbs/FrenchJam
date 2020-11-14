@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets._2D;
+using Jam;
 
 public class PlayerSwaper : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class PlayerSwaper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _kibonoki = GameObject.Find("Kibonoki");
+        _kibonoki = GameObject.Find("Kibo");
         _focus = _kibonoki;
 
         _camera = GameObject.Find("Camera").GetComponent<Camera2DFollow>();
@@ -25,10 +26,9 @@ public class PlayerSwaper : MonoBehaviour
     {
         if (_shinko)
         {
-            _shinko.GetComponent<Platformer2DUserControl>().enabled = !_shinko.GetComponent<Platformer2DUserControl>().enabled;
-            _kibonoki.GetComponent<Platformer2DUserControl>().enabled = !_kibonoki.GetComponent<Platformer2DUserControl>().enabled;
+            _shinko.GetComponent<ShinkoUserControl>().enabled = !_shinko.GetComponent<ShinkoUserControl>().enabled;
+            _kibonoki.GetComponent<KiboUserControl>().enabled = !_kibonoki.GetComponent<KiboUserControl>().enabled;
 
-            _focus.GetComponent<Animator>().SetFloat("Speed", 0);
             _focus = _focus == _kibonoki ? _shinko : _kibonoki;
             _camera.target = _focus.transform;
         }
@@ -45,12 +45,12 @@ public class PlayerSwaper : MonoBehaviour
             }
             else
             {
-                bool direction = _kibonoki.GetComponent<PlatformerCharacter2D>().facingRight();
+                bool direction = _kibonoki.GetComponent<Kibo>().facingRight();
 
                 _shinko = Instantiate(shinko_class, _kibonoki.transform.position + new Vector3(direction ? 1 : -1, 0), _kibonoki.transform.rotation);
                 if (!direction)
                 {
-                    _shinko.GetComponent<PlatformerCharacter2D>().Flip();
+                    _shinko.GetComponent<Shinko>().Flip();
                 }
                 swap();
             }
