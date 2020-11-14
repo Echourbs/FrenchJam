@@ -16,6 +16,8 @@ namespace UnityStandardAssets._2D
         const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
         private bool m_Grounded;            // Whether or not the player is grounded.
         private Transform m_CeilingCheck;   // A position marking where to check for ceilings
+        private Transform m_WallCheck1;
+        private Transform m_WallCheck2;
         const float k_CeilingRadius = .01f; // Radius of the overlap circle to determine if the player can stand up
         private Animator m_Anim;            // Reference to the player's animator component.
         private Rigidbody2D m_Rigidbody2D;
@@ -26,6 +28,8 @@ namespace UnityStandardAssets._2D
             // Setting up references.
             m_GroundCheck = transform.Find("GroundCheck");
             m_CeilingCheck = transform.Find("CeilingCheck");
+            m_WallCheck1 = transform.Find("WallCheck1");
+            m_WallCheck2 = transform.Find("WallCheck2");
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
         }
@@ -75,7 +79,6 @@ namespace UnityStandardAssets._2D
                 m_Anim.SetFloat("Speed", Mathf.Abs(move));
 
                 // Move the character
-                m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed, m_Rigidbody2D.velocity.y);
 
                 // If the input is moving the player right and the player is facing left...
                 if (move > 0 && !m_FacingRight)
@@ -89,6 +92,12 @@ namespace UnityStandardAssets._2D
                     // ... flip the player.
                     Flip();
                 }
+                else if (Physics2D.OverlapArea(m_WallCheck1.position, m_WallCheck2.position, m_WhatIsGround))
+                {
+                    move = 0;
+                }
+
+                m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed, m_Rigidbody2D.velocity.y);
             }
             // If the player should jump...
             if (m_Grounded && jump && m_Anim.GetBool("Ground"))
