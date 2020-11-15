@@ -52,6 +52,7 @@ namespace Jam
                     break;
                 }
             }
+            _anim.speed = 1 + Math.Abs(m_Rigidbody2D.velocity.x);
         }
 
         public void stop()
@@ -61,7 +62,6 @@ namespace Jam
 
         private void startWallRide()
         {
-            Debug.Log("Start");
             _sprite.rotation = m_FacingRight ? Quaternion.Euler(0, 0, 90) : Quaternion.Euler(0, 0, -90);
             _sprite.localPosition += new Vector3(-0.4f, 0, 0);
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, 0);
@@ -123,6 +123,14 @@ namespace Jam
                 m_Rigidbody2D.AddForce(new Vector2((m_FacingRight ? -m_JumpForce : m_JumpForce), m_JumpForce));
                 stopWallRide();
                 Flip();
+            }
+        }
+
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.tag == "Orb")
+            {
+                GameObject.Find("PlayerControler").GetComponent<PlayerSwaper>().tpKibo(other.transform.Find("SpawnPoint").position);
             }
         }
 

@@ -24,6 +24,7 @@ public class PlayerSwaper : MonoBehaviour
 
     void swap()
     {
+        Debug.Log("Swap");
         if (_shinko)
         {
             _shinko.GetComponent<ShinkoUserControl>().enabled = !_shinko.GetComponent<ShinkoUserControl>().enabled;
@@ -32,15 +33,18 @@ public class PlayerSwaper : MonoBehaviour
             (_focus.GetComponent(_focus == _kibonoki ? typeof(Kibo) : typeof(Shinko)) as ICharacter).stop();
             _focus = _focus == _kibonoki ? _shinko : _kibonoki;
             _camera.target = _focus.transform;
+            Debug.Log(_focus.name);
         }
     }
 
     void spawn()
     {
+        Debug.Log("Spawn");
         if (_focus == _kibonoki)
         {
             if (_shinko)
             {
+                Debug.Log("Destroy");
                 Destroy(_shinko);
                 _shinko = null;
             }
@@ -55,6 +59,16 @@ public class PlayerSwaper : MonoBehaviour
                 }
                 swap();
             }
+        }
+    }
+
+    public void tpKibo(Vector3 position)
+    {
+        if (_shinko)
+        {
+            _kibonoki.transform.position = position;
+            swap();
+            spawn();
         }
     }
 
