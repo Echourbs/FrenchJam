@@ -97,14 +97,6 @@ namespace Jam
             return m_FacingRight;
         }
 
-        void OnTriggerEnter2D(Collider2D other)
-        {
-            if (other.tag == "Apple")
-            {
-                Destroy(other.gameObject); // Or whatever way you want to remove the coin.
-            }
-        }
-
         public void startTp()
         {
             _anim.SetInteger("State", 1);
