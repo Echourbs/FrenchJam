@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EncodableAsset" id="{1d2063fd-c609-4284-bfe2-32a817e04f17}">
+		<property name="assetPath">
+			<value>Characters/Shinko/Fight/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1459401a-879e-41cf-99a5-f52411551ea9}</destination>
+		</relationship>
+	</object>
+</objects>

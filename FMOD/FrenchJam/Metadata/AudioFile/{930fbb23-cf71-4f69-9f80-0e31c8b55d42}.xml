@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{930fbb23-cf71-4f69-9f80-0e31c8b55d42}">
+		<property name="assetPath">
+			<value>Characters/Shinko/Movement/Spawn/Shinko_Movement_Spawn.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>2.9292083333333334</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1459401a-879e-41cf-99a5-f52411551ea9}</destination>
+		</relationship>
+	</object>
+</objects>

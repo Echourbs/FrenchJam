@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EncodableAsset" id="{11c97a31-0a84-42e2-b4c8-d759b43b7078}">
+		<property name="assetPath">
+			<value>Characters/Shinko/Movement/Jump/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1459401a-879e-41cf-99a5-f52411551ea9}</destination>
+		</relationship>
+	</object>
+</objects>

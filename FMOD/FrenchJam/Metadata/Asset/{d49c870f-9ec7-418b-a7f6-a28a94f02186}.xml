@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EncodableAsset" id="{d49c870f-9ec7-418b-a7f6-a28a94f02186}">
+		<property name="assetPath">
+			<value>Characters/Saki/Fight/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1459401a-879e-41cf-99a5-f52411551ea9}</destination>
+		</relationship>
+	</object>
+</objects>

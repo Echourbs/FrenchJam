@@ -1,0 +1,503 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8876382220707910052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Shinko/Movement/Shinko_Walk
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Shinko/Movement/Shinko_Walk
+  guid: 27c05024ca8748499cc10fca160fc6de
+  Banks:
+  - {fileID: -653987197068833707}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 750
+--- !u!114 &-8194046472805957781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Shinko/Movement/FEvent_Shinko_Despawn
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Shinko/Movement/FEvent_Shinko_Despawn
+  guid: 115a91d8b0c51241915d88ac0dc473ba
+  Banks:
+  - {fileID: -653987197068833707}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2575
+--- !u!114 &-6705706405253076604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environement/Object/Lights
+  m_EditorClassIdentifier: 
+  Path: event:/Environement/Object/Lights
+  guid: caa1b879a5ed1846ade701aff233e5ab
+  Banks:
+  - {fileID: -653987197068833707}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 23000
+--- !u!114 &-6220557867372830521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Shinko/Movement/Shinko_Spawn
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Shinko/Movement/Shinko_Spawn
+  guid: 6815eb97ed0b5c46b2ccb647e5d83a68
+  Banks:
+  - {fileID: -653987197068833707}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1625
+--- !u!114 &-5342720297429555839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environement/Object/Env_Object_Item
+  m_EditorClassIdentifier: 
+  Path: event:/Environement/Object/Env_Object_Item
+  guid: a2be18835c33cf4d98dabb7a52f9975c
+  Banks: []
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 734
+--- !u!114 &-3415726604939072586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Shinko/Fight/FEvent_Shinko_Fight_Purify
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Shinko/Fight/FEvent_Shinko_Fight_Purify
+  guid: 023b2c1ccbcb914e86bd3f166e1f4b4b
+  Banks:
+  - {fileID: -653987197068833707}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2179
+--- !u!114 &-1233164358321978428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environement/Object/Env_Object_Lights
+  m_EditorClassIdentifier: 
+  Path: event:/Environement/Object/Env_Object_Lights
+  guid: 80d030a6ec35fb4ca67b9e36c5de2448
+  Banks: []
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 23000
+--- !u!114 &-735001975455380532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Shinko/Movement/FEvent_Shinko_Movement_Jump
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Shinko/Movement/FEvent_Shinko_Movement_Jump
+  guid: 86e95acc9dd9a14a9a72e221b4e2a228
+  Banks: []
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 671
+--- !u!114 &-666997818600667448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Saki/Movement/FEvent_Saki_Movement_Walk
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Saki/Movement/FEvent_Saki_Movement_Walk
+  guid: 61cfa62c13f6914f9b7465bb17d7b665
+  Banks:
+  - {fileID: -653987197068833707}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 9433
+--- !u!114 &-653987197068833707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/FrenchJam/Build/Desktop/Master.bank
+  Name: Master
+  lastModified: 637410523713250617
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-515639354308308286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Shinko/Movement/FEvent_Shinko_Movement_Walk
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Shinko/Movement/FEvent_Shinko_Movement_Walk
+  guid: 4038c7596114164bb733af3f35ba0216
+  Banks: []
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 750
+--- !u!114 &-405143819013480340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Saki/Movement/FEvent_Saki_Movement_Spawn
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Saki/Movement/FEvent_Saki_Movement_Spawn
+  guid: 19a119b6ef58b841ab89a175e8097ca0
+  Banks:
+  - {fileID: -653987197068833707}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2375
+--- !u!114 &-177324431273612309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environement/Object/Env_Object_Activated
+  m_EditorClassIdentifier: 
+  Path: event:/Environement/Object/Env_Object_Activated
+  guid: e089bbfd59b41849b00eae2a3d5355bb
+  Banks: []
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2493
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 5794741076437639730}
+  - {fileID: -653987197068833707}
+  EditorEvents:
+  - {fileID: -3415726604939072586}
+  - {fileID: -405143819013480340}
+  - {fileID: -666997818600667448}
+  - {fileID: 5359319082232909651}
+  - {fileID: 4209740156887861046}
+  - {fileID: 3146368118711340824}
+  - {fileID: -8194046472805957781}
+  - {fileID: 5911418931219419667}
+  - {fileID: -8876382220707910052}
+  - {fileID: -6220557867372830521}
+  - {fileID: -6705706405253076604}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -653987197068833707}
+  StringsBanks:
+  - {fileID: 5794741076437639730}
+  stringsBankWriteTime: 637410523713300326
+  cacheVersion: 5
+--- !u!114 &2283655807976545234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Saki/Fight/FEvent_Saki_Fight_Summon
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Saki/Fight/FEvent_Saki_Fight_Summon
+  guid: d14c2c1cba20eb439ba99d78240788f3
+  Banks: []
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1625
+--- !u!114 &3146368118711340824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUS
+  m_EditorClassIdentifier: 
+  Path: event:/MUS
+  guid: 7a4003cc81f71143b55da4fc68444b92
+  Banks:
+  - {fileID: -653987197068833707}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 96000
+--- !u!114 &4209740156887861046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Saki/Movement/FEvent_Saki_Movement_Despawn
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Saki/Movement/FEvent_Saki_Movement_Despawn
+  guid: e0e2bfe9739849459d0c2554db5e2a5c
+  Banks:
+  - {fileID: -653987197068833707}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3357
+--- !u!114 &5359319082232909651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Saki/Movement/FEvent_Saki_Movement_Jump
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Saki/Movement/FEvent_Saki_Movement_Jump
+  guid: a4ad35c888014b4fb1ec1af409785258
+  Banks:
+  - {fileID: -653987197068833707}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 531
+--- !u!114 &5794741076437639730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/FrenchJam/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  lastModified: 637410523713300326
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1302
+  Exists: 1
+--- !u!114 &5806956957646459627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Shinko/Movement/FEvent_Shinko_Movement_Spawn
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Shinko/Movement/FEvent_Shinko_Movement_Spawn
+  guid: 7e86bac85a1dda458592004942f77a82
+  Banks: []
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2929
+--- !u!114 &5911418931219419667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environement/Object/Item
+  m_EditorClassIdentifier: 
+  Path: event:/Environement/Object/Item
+  guid: 162d752c33d4fe4d9aaa6dfe78326ddb
+  Banks:
+  - {fileID: -653987197068833707}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 734
+--- !u!114 &7490765609387807488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Shinko/Movement/FEvent_Shinko_Movement_Despawn
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Shinko/Movement/FEvent_Shinko_Movement_Despawn
+  guid: eb8fc8aa081ea74fb9b3477a4d00c9aa
+  Banks: []
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2575
