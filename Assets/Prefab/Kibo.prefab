@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 3299208816300386622}
   m_Layer: 8
   m_Name: Kibo
-  m_TagString: Player
+  m_TagString: Kibo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
