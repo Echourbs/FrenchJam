@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f2af643209f64f449b21de11586a90a8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - popUpDamage: {instanceID: 0}
+  - lifeBar: {instanceID: 0}
+  - gradientHealthBar: {instanceID: 0}
+  - visualInimigo: {instanceID: 0}
+  - materialHit: {fileID: 2100000, guid: b3e4d2583a49c534cbabcbe093d8b95a, type: 2}
+  - materialPadrao: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - scriptInimigo: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

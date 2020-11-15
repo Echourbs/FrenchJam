@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 57c4570202d8fd449b47ad7cce3666ab
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - enxofrePrefab: {fileID: 1546680620559456491, guid: 40b88ed0bc3f95e41b64f6923eb69e53,
+      type: 3}
+  - itemQuedaPrefab: {fileID: 1297406176339397372, guid: 521c549b570bbf94e8fcb719e04d6292,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
