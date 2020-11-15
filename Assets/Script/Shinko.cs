@@ -52,6 +52,8 @@ namespace Jam
                     break;
                 }
             }
+            _anim.SetBool("Grounded", m_Grounded);
+            _anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
             _anim.speed = 1 + Math.Abs(m_Rigidbody2D.velocity.x);
         }
 
@@ -66,6 +68,7 @@ namespace Jam
             _sprite.localPosition += new Vector3(-0.4f, 0, 0);
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, 0);
             _wallRiding = true;
+            _anim.SetBool("WallRiding", true);
         }
 
         private void stopWallRide()
@@ -73,12 +76,12 @@ namespace Jam
             _wallRiding = false;
             _sprite.localPosition = _origin;
             _sprite.rotation = Quaternion.Euler(0, 0, 0);
+            _anim.SetBool("WallRiding", false);
         }
 
         public void Move(float move, bool jump)
         {
             Vector2 toMove = new Vector2(move * m_MaxSpeed, m_Rigidbody2D.velocity.y);
-            _anim.SetFloat("Speed", Math.Abs(move));
             // If the input is moving the player right and the player is facing left...
             if (move > 0 && !m_FacingRight)
             {
@@ -108,6 +111,7 @@ namespace Jam
                 stopWallRide();
             }
             m_Rigidbody2D.velocity = Vector2.MoveTowards(m_Rigidbody2D.velocity, toMove, Time.deltaTime * (m_Grounded || _wallRiding ? 80:30));
+            _anim.SetFloat("Speed", Math.Abs(m_Rigidbody2D.velocity.x));
 
             // If the player should jump...
             if (m_Grounded && jump && !_wallRiding)
