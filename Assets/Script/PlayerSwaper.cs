@@ -11,6 +11,7 @@ public class PlayerSwaper : MonoBehaviour
     private GameObject _shinko;
     private Camera2DFollow _camera;
     private GameObject _focus;
+    private Vector3 _tpLocation;
 
 
     // Start is called before the first frame update
@@ -18,13 +19,19 @@ public class PlayerSwaper : MonoBehaviour
     {
         _kibonoki = GameObject.Find("Kibo");
         _focus = _kibonoki;
+        _kibonoki.transform.Find("Sprite").GetComponent<KiboAnim>().fadeOutEnd.AddListener(OnFadeOutEnd);
 
         _camera = GameObject.Find("Camera").GetComponent<Camera2DFollow>();
     }
 
+    void OnFadeOutEnd()
+    {
+        _kibonoki.transform.position = _tpLocation;
+        _kibonoki.GetComponent<Kibo>().endTp();
+    }
+
     void swap()
     {
-        Debug.Log("Swap");
         if (_shinko)
         {
             _shinko.GetComponent<ShinkoUserControl>().enabled = !_shinko.GetComponent<ShinkoUserControl>().enabled;
@@ -33,18 +40,15 @@ public class PlayerSwaper : MonoBehaviour
             (_focus.GetComponent(_focus == _kibonoki ? typeof(Kibo) : typeof(Shinko)) as ICharacter).stop();
             _focus = _focus == _kibonoki ? _shinko : _kibonoki;
             _camera.target = _focus.transform;
-            Debug.Log(_focus.name);
         }
     }
 
     void spawn()
     {
-        Debug.Log("Spawn");
         if (_focus == _kibonoki)
         {
             if (_shinko)
             {
-                Debug.Log("Destroy");
                 Destroy(_shinko);
                 _shinko = null;
             }
@@ -66,9 +70,10 @@ public class PlayerSwaper : MonoBehaviour
     {
         if (_shinko)
         {
-            _kibonoki.transform.position = position;
             swap();
             spawn();
+            _tpLocation = position;
+            _kibonoki.GetComponent<Kibo>().startTp();
         }
     }
 

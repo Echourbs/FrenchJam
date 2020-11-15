@@ -17,7 +17,12 @@ namespace Jam
         private Transform m_WallCheck2;
         private Animator _anim;
         private Rigidbody2D m_Rigidbody2D;
-        private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+        private bool m_FacingRight = true;
+        private bool _canMove = true;
+
+        public bool CanMove { get => _canMove; set => _canMove = value; }
+
+        // For determining which way the player is currently facing.
 
 
         private void Awake()
@@ -27,7 +32,7 @@ namespace Jam
             m_WallCheck1 = transform.Find("WallCheck1");
             m_WallCheck2 = transform.Find("WallCheck2");
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
-            _anim = GetComponent<Animator>();
+            _anim = transform.Find("Sprite").GetComponent<Animator>();
         }
 
 
@@ -55,6 +60,10 @@ namespace Jam
 
         public void Move(float move, bool jump)
         {
+            if (!_canMove)
+            {
+                return;
+            }
             // If the input is moving the player right and the player is facing left...
             if (move > 0 && !m_FacingRight)
             {
@@ -94,6 +103,16 @@ namespace Jam
             {
                 Destroy(other.gameObject); // Or whatever way you want to remove the coin.
             }
+        }
+
+        public void startTp()
+        {
+            _anim.SetInteger("State", 1);
+        }
+
+        public void endTp()
+        {
+            _anim.SetInteger("State", 2);
         }
 
 

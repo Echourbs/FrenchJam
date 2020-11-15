@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 7416166243273859560}
   - component: {fileID: 5082711741389528449}
   - component: {fileID: 1103291359564239288}
+  - component: {fileID: 1985640148894452801}
   m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
@@ -262,7 +263,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -304,7 +305,7 @@ Animator:
   m_GameObject: {fileID: 5006823746395306668}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 83a2e807f0198724a88d32ca5fe14df0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -313,6 +314,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1985640148894452801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5006823746395306668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01271205c12cbcc468d524805fa28d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kibo: {fileID: 0}
+  fadeOutEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6383656111922827941
 GameObject:
   m_ObjectHideFlags: 0
