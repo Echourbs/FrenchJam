@@ -136,6 +136,11 @@ namespace Jam
             {
                 GameObject.Find("PlayerControler").GetComponent<PlayerSwaper>().tpKibo(other.transform.Find("SpawnPoint").position);
             }
+
+            if (other.tag == "Tree")
+            {
+                FindObjectOfType<GameManager>().endGame();
+            }
         }
 
         public bool facingRight()

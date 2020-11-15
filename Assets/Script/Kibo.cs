@@ -82,7 +82,9 @@ namespace Jam
             }
 
             m_Rigidbody2D.velocity = new Vector2(move* m_MaxSpeed, m_Rigidbody2D.velocity.y);
-            
+
+            _anim.SetFloat("Speed", Math.Abs(m_Rigidbody2D.velocity.x));
+
             // If the player should jump...
             if (m_Grounded && jump)
             {

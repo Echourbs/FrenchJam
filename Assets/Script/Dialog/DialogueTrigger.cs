@@ -40,11 +40,12 @@ public class DialogueTrigger : MonoBehaviour {
 	public void fail()
     {
 		_cur = fu;
+		TriggerDialogue();
 	}
 
-	public Dialogue getCur()
+	public bool helped()
     {
-		return _cur;
+		return (_cur == thx);
     }
 
 	void OnTriggerExit2D(Collider2D other)
