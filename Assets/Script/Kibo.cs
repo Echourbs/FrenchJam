@@ -4,7 +4,7 @@ using UnityEngine;
 #pragma warning disable 649
 namespace Jam
 {
-    public class Kibo : MonoBehaviour
+    public class Kibo : MonoBehaviour, ICharacter
     {
         [SerializeField] private float m_MaxSpeed = 7f;                    // The fastest the player can travel in the x axis.
         [SerializeField] private float m_JumpForce = 600f;                  // Amount of force added when the player jumps.
@@ -15,8 +15,10 @@ namespace Jam
         private bool m_Grounded;            // Whether or not the player is grounded.
         private Transform m_WallCheck1;
         private Transform m_WallCheck2;
+        private Animator _anim;
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+
 
         private void Awake()
         {
@@ -25,6 +27,7 @@ namespace Jam
             m_WallCheck1 = transform.Find("WallCheck1");
             m_WallCheck2 = transform.Find("WallCheck2");
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
+            _anim = GetComponent<Animator>();
         }
 
 
@@ -45,6 +48,10 @@ namespace Jam
             }
         }
 
+        public void stop()
+        {
+            //_anim.SetFloat("Speed", 0);
+        }
 
         public void Move(float move, bool jump)
         {
@@ -81,9 +88,8 @@ namespace Jam
             return m_FacingRight;
         }
 
-        void OnTriggerEnter(Collider other)
+        void OnTriggerEnter2D(Collider2D other)
         {
-            Debug.Log(other);
             if (other.tag == "Apple")
             {
                 Destroy(other.gameObject); // Or whatever way you want to remove the coin.

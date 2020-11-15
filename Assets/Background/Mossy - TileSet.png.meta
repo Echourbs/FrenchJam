@@ -820,8 +820,8 @@ TextureImporter:
         - {x: 256, y: -218.5122}
       physicsShape:
       - - {x: 95, y: -119}
-        - {x: 96, y: 125}
-        - {x: 256, y: 124}
+        - {x: 100, y: 123}
+        - {x: 256, y: 123}
         - {x: 256, y: -114}
       tessellationDetail: 0.02
       bones: []
@@ -854,7 +854,7 @@ TextureImporter:
       physicsShape:
       - - {x: -256, y: -118}
         - {x: -256, y: 123}
-        - {x: 256, y: 120}
+        - {x: 256, y: 124}
         - {x: 256, y: -112}
       tessellationDetail: 0
       bones: []

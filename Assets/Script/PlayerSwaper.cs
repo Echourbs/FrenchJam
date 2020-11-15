@@ -29,6 +29,7 @@ public class PlayerSwaper : MonoBehaviour
             _shinko.GetComponent<ShinkoUserControl>().enabled = !_shinko.GetComponent<ShinkoUserControl>().enabled;
             _kibonoki.GetComponent<KiboUserControl>().enabled = !_kibonoki.GetComponent<KiboUserControl>().enabled;
 
+            (_focus.GetComponent(_focus == _kibonoki ? typeof(Kibo) : typeof(Shinko)) as ICharacter).stop();
             _focus = _focus == _kibonoki ? _shinko : _kibonoki;
             _camera.target = _focus.transform;
         }
